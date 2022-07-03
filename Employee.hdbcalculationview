@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Employee" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Employee"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="MD.Employees">
+    <resourceUri>MD.Employees</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="MD.Employees">
+  <attributes>
+    <attribute id="EMPLOYEEID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee ID"/>
+      <keyMapping columnObjectName="MD.Employees" columnName="EMPLOYEEID"/>
+    </attribute>
+    <attribute id="FIRST_NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="First or Given Name"/>
+      <keyMapping columnObjectName="MD.Employees" columnName="NAME.FIRST"/>
+    </attribute>
+    <attribute id="LAST_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Family Name"/>
+      <keyMapping columnObjectName="MD.Employees" columnName="NAME.LAST"/>
+    </attribute>
+    <attribute id="EMAILADDRESS" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Email Address"/>
+      <keyMapping columnObjectName="MD.Employees" columnName="EMAILADDRESS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
